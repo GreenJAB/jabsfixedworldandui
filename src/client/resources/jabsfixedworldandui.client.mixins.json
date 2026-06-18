@@ -1,14 +1,37 @@
 {
-	"required": true,
-	"package": "net.greenjab.jabsfixedworldandui.client.mixin",
-	"compatibilityLevel": "JAVA_25",
-	"client": [
-		"ExampleClientMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
-	}
+  "required": true,
+  "package": "net.greenjab.jabsfixedworldandui.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "mixins": [
+    "ClientLevelMixin",
+    "FireworkParticlesMixin",
+    "GuiMixin",
+    "fog.AtmosphericFogEnvironmentMixin",
+    "fog.FogRendererMixin",
+    "fog.OptionsMixin",
+    "ui.AbstractContainerScreenMixin",
+    "ui.AbstractMountInventoryScreenMixin",
+    "ui.AbstractRecipeBookScreenMixin",
+    "ui.AbstractWidgetMixin",
+    "ui.AdvancementsScreenMixin",
+    "ui.AdvancementTabMixin",
+    "ui.AdvancementWidgetMixin",
+    "ui.ClientBundleTooltipMixin",
+    "ui.ClientTooltipComponentMixin",
+    "ui.ContainerScreenMixin",
+    "ui.CreateWorldScreenGameTabMixin",
+    "ui.CreateWorldScreenMixin",
+    "ui.CreativeModeInventoryScreenMixin",
+    "ui.CustomContainerTextureMixin",
+    "ui.MerchantScreenMixin",
+    "ui.MouseHandlerMixin",
+    "ui.ShulkerBoxScreenMixin",
+    "ui.VideoSettingsScreenMixin"
+  ]
 }

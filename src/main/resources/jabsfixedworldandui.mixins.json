@@ -1,14 +1,48 @@
 {
-	"required": true,
-	"package": "net.greenjab.jabsfixedworldandui.mixin",
-	"compatibilityLevel": "JAVA_25",
-	"mixins": [
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
+  "required": true,
+  "package": "net.greenjab.jabsfixedworldandui.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "inventory.BundleContentsMixin",
+    "inventory.BundleContentsMutableMixin",
+    "inventory.CraftingInventoryAccessor",
+    "inventory.InventoryMenuMixin",
+    "inventory.InventoryMixin",
+    "inventory.PlayerMixin",
+    "inventory.ProjectileWeaponItemMixin",
+    "inventory.ServerPlayerMixin",
+    "night.ApplyBonusCountMixin",
+    "night.BlockMixin",
+    "night.DifficultyInstanceMixin",
+    "night.EnchantedCountIncreaseFunctionMixin",
+    "night.FishingHookMixin",
+    "other.AdvancementMixin",
+    "other.DyeColorMixin",
+    "other.DyedItemColorMixin",
+    "other.InventoryMenuMixin",
+    "other.ItemsMixin",
+    "other.ItemStackMixin",
+    "other.LootPoolMixin",
+    "other.SpawnArmorTrimsCommandMixin",
+    "other.TrimMaterialsMixin",
+    "other.VineBlockMixin",
+    "structure.BlockAgeProcessorMixin",
+    "structure.IglooPiecesMixin",
+    "structure.LodestoneTrackerMixin",
+    "structure.NoiseBasedAquifierMixin",
+    "structure.OceanMonumentPieceBuildingMixin",
+    "structure.OceanMonumentPieceCoreMixin",
+    "structure.OreFeatureMixin",
+    "structure.ServerLevelMixin",
+    "structure.SnowAndFreezeFeatureMixin",
+    "structure.WoodlandMansionPieceMixin",
+    "structure.WoodlandMansionPiecePlacerMixin",
+    "structure.WoodlandMansionStructureMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
 	}
 }

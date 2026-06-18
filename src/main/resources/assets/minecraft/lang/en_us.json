@@ -1,0 +1,9 @@
+{
+    "item.minecraft.firework_star.shape.burst": "Cube",
+    "merchant.level.1": "Novice",
+    "merchant.level.2": "Adept",
+    "merchant.level.3": "Skilled",
+    "merchant.level.4": "Expert",
+    "merchant.level.5": "Master",
+    "merchant.title": "%s %s"
+}
