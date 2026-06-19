@@ -2,6 +2,7 @@ package net.greenjab.jabsfixedworldandui.client.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
+import net.fabricmc.loader.api.FabricLoader;
 import net.greenjab.jabsfixedworldandui.JabsFixedWorldAndUI;
 import net.greenjab.jabsfixedworldandui.client.JabsFixedWorldAndUIClient;
 import net.greenjab.jabsfixedworldandui.other.ModTags;
@@ -155,9 +156,9 @@ public abstract class GuiMixin {
              if ((player.isCreative()&&!this.minecraft.options.keyPlayerList.isDown())) {
                  top = graphics.guiHeight() - 39;
                  if (!(client.player.connection.getWaypointManager().hasWaypoints() ||
-                       player.getMainHandItem().is(ModTags.HAS_WAYPOINTS) ||
-                       player.getOffhandItem().is(ModTags.HAS_WAYPOINTS) ||
-                       client.player.jumpableVehicle() != null)) {
+                         (FabricLoader.getInstance().isModLoaded("jabsfixedtransport")&&(
+                                 player.getMainHandItem().is(ModTags.HAS_WAYPOINTS) || player.getOffhandItem().is(ModTags.HAS_WAYPOINTS))) ||
+                         client.player.jumpableVehicle() != null)) {
                      top+=6;
                  }
                  left = graphics.guiWidth() / 2 - 91;

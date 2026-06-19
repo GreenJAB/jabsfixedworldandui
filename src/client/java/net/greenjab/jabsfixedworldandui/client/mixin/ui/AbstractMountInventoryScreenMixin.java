@@ -1,5 +1,6 @@
 package net.greenjab.jabsfixedworldandui.client.mixin.ui;
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.greenjab.jabsfixedworldandui.client.JabsFixedWorldAndUIClient;
 import net.greenjab.jabsfixedworldandui.client.CustomContainerTextureHolder;
 import net.minecraft.client.gui.screens.inventory.AbstractMountInventoryScreen;
@@ -26,10 +27,10 @@ public abstract class AbstractMountInventoryScreenMixin {
         if (entity != null) {
             if (entity instanceof Horse) {
                 ((CustomContainerTextureHolder) AMIS).jabsfixedworldandui$setCustomTexture("/horse");
+            } else if (entity instanceof Donkey || (entity instanceof Mule && !FabricLoader.getInstance().isModLoaded("jabsfixedtransport"))) {
+                ((CustomContainerTextureHolder) AMIS).jabsfixedworldandui$setCustomTexture("/donkey");
             } else if (entity instanceof Mule) {
                     ((CustomContainerTextureHolder) AMIS).jabsfixedworldandui$setCustomTexture("/mule");
-            } else if (entity instanceof Donkey) {
-                ((CustomContainerTextureHolder) AMIS).jabsfixedworldandui$setCustomTexture("/donkey");
             } else if (entity instanceof Camel) {
                 ((CustomContainerTextureHolder) AMIS).jabsfixedworldandui$setCustomTexture("/camel");
             } else if (entity instanceof Llama || entity instanceof TraderLlama) {

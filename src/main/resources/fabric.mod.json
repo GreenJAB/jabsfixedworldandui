@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "jabsfixedworldandui",
 	"version": "${version}",
-	"name": "Jabs Fixed Combat",
-	"description": "I Fixed Combat",
+	"name": "Jabs Fixed World and UI",
+	"description": "I Fixed World and UI",
 	"authors": [
 		"Green_Jab"
 	],

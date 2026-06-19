@@ -1,4 +1,4 @@
-package net.greenjab.jabsfixedworldandui.mixin.other;
+package net.greenjab.jabsfixedworldandui.mixin.advancements;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;

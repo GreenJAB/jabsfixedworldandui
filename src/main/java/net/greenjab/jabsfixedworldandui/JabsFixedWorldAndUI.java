@@ -42,4 +42,6 @@ public class JabsFixedWorldAndUI implements ModInitializer {
 		armor.add(entity.equipment.get(EquipmentSlot.HEAD));
 		return armor;
 	}
+
+	//TODO try add animated villager eyes
 }
