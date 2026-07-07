@@ -107,8 +107,8 @@ public abstract class GuiMixin {
          }
      }
 
-    @Unique
-    private static final String[] names = {"full_moon", "waning_gibbous", "third_quarter", "waning_crescent", "new_moon", "waxing_crescent", "first_quarter", "waxing_gibbous"};
+    @Unique private static final String[] names = {"full_moon", "waning_gibbous", "third_quarter", "waning_crescent", "new_moon", "waxing_crescent", "first_quarter", "waxing_gibbous"};
+    @Unique private static final String[] icons = {"fish", "null", "farm", "null", "looting", "null", "fortune", "null"};
 
     @Inject(method = "extractHotbarAndDecorations", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;canHurtPlayer()Z"))
     private void timeAndLocation(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker, CallbackInfo ci) {
@@ -137,6 +137,7 @@ public abstract class GuiMixin {
                  if (player.level().isDarkOutside() && player.level().canSeeSky(player.blockPosition()))
                     string= (hour<10?"0":"") + hour + ":" + (min<10?"0":"") + min + " | " + textMoonPhase.getString();
                  else string= (hour<10?"0":"") + hour + ":" + (min<10?"0":"") + min + " | §7" + textMoonPhase.getString();
+                 if (FabricLoader.getInstance().isModLoaded("jabsfixedmobsandblocks")) string = string + Component.translatable("world.moon." + icons[moon]);
              } else {
                  string = getDirection(player.getYRot()) + " | " + player.getBlockX() + ", " + player.getBlockY() + ", " + player.getBlockZ();
              }

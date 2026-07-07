@@ -3,7 +3,6 @@ package net.greenjab.jabsfixedworldandui;
 import net.fabricmc.api.ModInitializer;
 
 import net.greenjab.jabsfixedworldandui.registries.BiomeAdditions;
-import net.greenjab.jabsfixedworldandui.registries.ComponentRegistry;
 import net.greenjab.jabsfixedworldandui.registries.LootTableRegistry;
 import net.greenjab.jabsfixedworldandui.registries.TrimMaterialsRegistry;
 import net.minecraft.resources.Identifier;
@@ -24,7 +23,6 @@ public class JabsFixedWorldAndUI implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Initializing " + MOD_NAME);
 
-		ComponentRegistry.registerComponent();
 		LootTableRegistry.registerLootTable();
 		TrimMaterialsRegistry.registerTrimMaterials();
 		BiomeAdditions.registerBiomeAdds();
@@ -42,6 +40,4 @@ public class JabsFixedWorldAndUI implements ModInitializer {
 		armor.add(entity.equipment.get(EquipmentSlot.HEAD));
 		return armor;
 	}
-
-	//TODO try add animated villager eyes
 }

@@ -1,9 +1,12 @@
 package net.greenjab.jabsfixedworldandui.client.mixin.ui;
 
+import com.llamalad7.mixinextras.sugar.Local;
 import net.greenjab.jabsfixedworldandui.client.JabsFixedWorldAndUIClient;
 import net.greenjab.jabsfixedworldandui.client.CustomContainerTextureHolder;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.MerchantScreen;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.contents.TranslatableContents;
@@ -73,5 +76,20 @@ public abstract class MerchantScreenMixin {
         if (!((CustomContainerTextureHolder) MS).jabsfixedworldandui$getCustomTexture().isEmpty())
             return Identifier.withDefaultNamespace("textures/gui/container/villager" + ((CustomContainerTextureHolder) MS).jabsfixedworldandui$getCustomTexture() + ".png");
         return texture;
+    }
+
+    @Inject(method = "extractBackground", at = @At(value = "TAIL"))
+    private void animatedEyes(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float a, CallbackInfo ci,
+                                     @Local(ordinal = 2) int xo,
+                                     @Local(ordinal = 3) int yo) {
+        if (JabsFixedWorldAndUIClient.usingCustomContainers()) {
+            String type = "villager";
+            MerchantScreen MS = (MerchantScreen) (Object)this;
+            if (!((CustomContainerTextureHolder) MS).jabsfixedworldandui$getCustomTexture().isEmpty()) {
+                String[] s = ((CustomContainerTextureHolder) MS).jabsfixedworldandui$getCustomTexture().split("/");
+                type = s[s.length-1];
+            }
+            graphics.blitSprite(RenderPipelines.GUI_TEXTURED, Identifier.parse("container/villager/animated/"+type), xo + 116, yo + 49, 12, 5);
+        }
     }
 }

@@ -1,6 +1,5 @@
 package net.greenjab.jabsfixedworldandui.mixin.other;
 
-import net.greenjab.jabsfixedworldandui.registries.ComponentRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -19,13 +18,6 @@ import java.util.function.Consumer;
 
 @Mixin(ItemStack.class)
 public abstract class ItemStackMixin {
-
-    @Inject(method = "addDetailsToTooltip", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;addToTooltip(Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/world/item/Item$TooltipContext;Lnet/minecraft/world/item/component/TooltipDisplay;Ljava/util/function/Consumer;Lnet/minecraft/world/item/TooltipFlag;)V", ordinal = 0))
-    private void addBaitTooltip(Item.TooltipContext context, TooltipDisplay display, Player player,
-                                TooltipFlag tooltipFlag, Consumer<Component> builder, CallbackInfo ci) {
-        ItemStack stack = (ItemStack)(Object)this;
-        stack.addToTooltip(ComponentRegistry.BAIT_POWER, context, display, builder, tooltipFlag);
-    }
 
     @Inject(method = "addDetailsToTooltip", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/component/PatchedDataComponentMap;size()I"))
     private void addTagsTooltip(Item.TooltipContext context, TooltipDisplay display, Player player,

@@ -1,0 +1,14 @@
+{
+    "item.minecraft.firework_star.shape.burst": "Clot",
+    "advancements.husbandry.allay_deliver_cake_to_note_block.description": "Have an Allay drop a Kitchel at a Ringer",
+    "advancements.husbandry.plant_any_sniffer_seed.description": "Sow all Sniffer Seeds",
+    "advancements.adventure.very_very_frightening.description": "Strike a Creeper with Lightning",
+    "advancements.adventure.kill_all_mobs.title": "Folkmorth!",
+    "advancements.adventure.read_power_from_chiseled_bookshelf.description": "Use Galed Books in a Graven Bookshelf to Better a Galdercraft Bench",
+    "merchant.level.1": "Greenhorn",
+    "merchant.level.2": "Adept",
+    "merchant.level.3": "Arade",
+    "merchant.level.4": "Very Arade",
+    "merchant.level.5": "Maister",
+    "merchant.title": "%s %s"
+}

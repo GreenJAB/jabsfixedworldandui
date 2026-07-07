@@ -1,0 +1,14 @@
+{
+    "item.minecraft.firework_star.shape.burst": "Kube",
+    "advancements.husbandry.allay_deliver_cake_to_note_block.description": "Få ei hjelpeånd til å sleppe eit kjeks på ei noteblokk",
+    "advancements.husbandry.plant_any_sniffer_seed.description": "Plant alle moldnasefrøa",
+    "advancements.adventure.very_very_frightening.description": "Slå ein creeper med lyn",
+    "advancements.adventure.kill_all_mobs.title": "Utrydning!",
+    "advancements.adventure.read_power_from_chiseled_bookshelf.description": "Plasser ei galdrebok i ei forma bokhylle for å oppgradere eit galdrebord",
+    "merchant.level.1": "Næming",
+    "merchant.level.2": "Lærling",
+    "merchant.level.3": "Svein",
+    "merchant.level.4": "Fagmann",
+    "merchant.level.5": "Meister",
+    "merchant.title": "%s %s"
+}

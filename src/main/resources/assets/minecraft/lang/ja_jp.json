@@ -1,0 +1,14 @@
+{
+    "item.minecraft.firework_star.shape.burst": "破裂",
+    "advancements.husbandry.allay_deliver_cake_to_note_block.description": "アレイに音符ブロックの場所へクッキーを落としてもらう",
+    "advancements.husbandry.plant_any_sniffer_seed.description": "スニッファーが見つけた種をすべて植える",
+    "advancements.adventure.very_very_frightening.description": "雷をクリーパーに落とす",
+    "advancements.adventure.kill_all_mobs.title": "モンスター狩りの達人",
+    "advancements.adventure.read_power_from_chiseled_bookshelf.description": "模様入りの本棚にあるエンチャント本を使い、エンチャントテーブルをアップグレードする",
+    "merchant.level.1": "新米",
+    "merchant.level.2": "中堅",
+    "merchant.level.3": "一人前",
+    "merchant.level.4": "熟練者",
+    "merchant.level.5": "達人",
+    "merchant.title": "%s %s"
+}
