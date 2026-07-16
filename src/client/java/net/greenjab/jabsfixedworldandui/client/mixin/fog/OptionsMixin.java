@@ -39,8 +39,8 @@ public abstract class OptionsMixin {
 
     @Inject(method = "processDumpedOptions", at = @At("TAIL"))
     private void armorHudOption(Options.OptionAccess access, CallbackInfo ci){
-        access.process("newArmorHud", JabsFixedWorldAndUIClient.newArmorHud);
-        access.process("fog_21_6", JabsFixedWorldAndUIClient.fog_21_6);
+        access.process("newArmorHud", JabsFixedWorldAndUIClient.itemArmorHud);
+        access.process("fog_21_6", JabsFixedWorldAndUIClient.jabsFog);
     }
 
     @ModifyArg(method = "processDumpedOptions", at = @At(

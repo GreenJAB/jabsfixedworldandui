@@ -25,6 +25,7 @@
     "other.InventoryMenuMixin",
     "other.ItemsMixin",
     "other.ItemStackMixin",
+    "other.MinecraftServerMixin",
     "other.SpawnArmorTrimsCommandMixin",
     "other.TrimMaterialsMixin",
     "other.VineBlockMixin",

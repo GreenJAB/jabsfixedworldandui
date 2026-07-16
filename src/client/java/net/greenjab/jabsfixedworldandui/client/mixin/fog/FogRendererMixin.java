@@ -21,10 +21,10 @@ import java.awt.*;
 public abstract class FogRendererMixin  {
 
     @ModifyExpressionValue(method = "computeFogColor", at = @At(value = "INVOKE",
-                                                            target = "Lnet/minecraft/client/renderer/fog/environment/FogEnvironment;getBaseColor(Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/Camera;IF)I"))
-    private int undergroundDarkness(int original, @Local(ordinal = 0) FogEnvironment colorSourceEnvironment, @Local(argsOnly = true) ClientLevel level, @Local(
-            argsOnly = true
-    ) Camera camera) {
+            target = "Lnet/minecraft/client/renderer/fog/environment/FogEnvironment;getBaseColor(Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/Camera;IF)I"))
+    private int undergroundDarkness(int original, @Local(ordinal = 0) FogEnvironment colorSourceEnvironment,
+                                    @Local(argsOnly = true) ClientLevel level, @Local(argsOnly = true) Camera camera) {
+        if (!JabsFixedWorldAndUIClient.jabsFog.get()) return original;
         if (!level.dimensionType().hasSkyLight()) return original;
         if (camera.entity().isSpectator() && level.getBlockState(BlockPos.containing(camera.entity().getEyePosition())).isSolidRender()) return original;
         if (!colorSourceEnvironment.toString().toLowerCase().contains("atmospheric")) return original;
@@ -34,5 +34,4 @@ public abstract class FogRendererMixin  {
         Color fogColor = new Color(c.x * l, c.y * l, c.z * l, 1);
         return fogColor.hashCode();
     }
-
 }

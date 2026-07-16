@@ -21,7 +21,7 @@
     "advancements.adventure.kill_with_tnt.description": "Tuez un monstre avec de la TNT.",
     "advancements.adventure.kill_the_warden.title": "Si ça saigne",
     "advancements.adventure.kill_the_warden.description": "Vaincre le Warden.",
-    "options.newArmorHud" : "Afficher l'armure dans le HUD",
+    "options.itemArmorHud" : "Afficher l'armure dans le HUD",
     "world.moon.full_moon": "Pleine lune \uD83C\uDFA3",
     "world.moon.waning_gibbous": "Gibbeuse décroissante",
     "world.moon.third_quarter": "Troisième trimestre \uD83D\uDE9C",
@@ -30,6 +30,6 @@
     "world.moon.waxing_crescent": "Croissant de cire",
     "world.moon.first_quarter": "Premier trimestre ⛏",
     "world.moon.waxing_gibbous": "Gibbeuse croissante",
-    "options.fog_21_6": "Disable 1.21.6 Fog",
+    "options.jabsFog": "Disable 1.21.6 Fog",
     "generator.jabsfixedworldandui.floating_islands": "Floating Islands"
 }

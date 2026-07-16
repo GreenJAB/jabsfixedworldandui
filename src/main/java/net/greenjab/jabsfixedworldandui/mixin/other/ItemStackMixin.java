@@ -1,5 +1,6 @@
 package net.greenjab.jabsfixedworldandui.mixin.other;
 
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -24,6 +25,11 @@ public abstract class ItemStackMixin {
                                 TooltipFlag tooltipFlag, Consumer<Component> builder, CallbackInfo ci) {
         ItemStack stack = (ItemStack)(Object)this;
         if (player.isCreative()) testTags(stack, builder);
+    }
+
+    @ModifyExpressionValue(method = "addDetailsToTooltip", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;isDamaged()Z"))
+    private boolean alwaysShowMaxDurability(boolean original) {
+        return true;
     }
 
     @Unique

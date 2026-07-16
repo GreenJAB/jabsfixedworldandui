@@ -21,7 +21,7 @@
     "advancements.adventure.kill_with_tnt.description": "Вбийте моба використовуючи вибухівку",
     "advancements.adventure.kill_the_warden.title": "Хоч оком світи",
     "advancements.adventure.kill_the_warden.description": "Убийте боронителя",
-    "options.newArmorHud" : "Показати броню в HUD",
+    "options.itemArmorHud" : "Показати броню в HUD",
     "world.moon.full_moon": "повний місяць \uD83C\uDFA3",
     "world.moon.waning_gibbous": "Згасаючий Гіббус",
     "world.moon.third_quarter": "Третя чверть \uD83D\uDE9C",
@@ -30,6 +30,6 @@
     "world.moon.waxing_crescent": "Зростаючий півмісяць",
     "world.moon.first_quarter": "Перша чверть ⛏",
     "world.moon.waxing_gibbous": "Восковий Гіббус",
-    "options.fog_21_6": "Disable 1.21.6 Fog",
+    "options.jabsFog": "Disable 1.21.6 Fog",
     "generator.jabsfixedworldandui.floating_islands": "Floating Islands"
 }

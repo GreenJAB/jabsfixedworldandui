@@ -21,7 +21,7 @@
     "advancements.adventure.kill_with_tnt.description": "Убейте существо используя динамит",
     "advancements.adventure.kill_the_warden.title": "Если его можно ранить..",
     "advancements.adventure.kill_the_warden.description": "Убейте хранителя",
-    "options.newArmorHud" : "Показать броню в HUD",
+    "options.itemArmorHud" : "Показать броню в HUD",
     "world.moon.full_moon": "Полнолуние \uD83C\uDFA3",
     "world.moon.waning_gibbous": "Убывающая Луна",
     "world.moon.third_quarter": "Третья четверть \uD83D\uDE9C",
@@ -30,6 +30,6 @@
     "world.moon.waxing_crescent": "Растущий полумесяц",
     "world.moon.first_quarter": "Первый квартал ⛏",
     "world.moon.waxing_gibbous": "Растущая Луна",
-    "options.fog_21_6": "Disable 1.21.6 Fog",
+    "options.jabsFog": "Disable 1.21.6 Fog",
     "generator.jabsfixedworldandui.floating_islands": "Floating Islands"
 }

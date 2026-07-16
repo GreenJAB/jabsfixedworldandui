@@ -26,12 +26,11 @@ public abstract class AtmosphericFogEnvironmentMixin {
     private float rainFogMultiplier;
 
     @Inject(method = "setupFog", at = @At(value = "TAIL"))
-    private void revertAndPaleFog(FogData fog, Camera camera, ClientLevel level, float renderDistance, DeltaTracker deltaTracker,
+    private void revertAndNewFog(FogData fog, Camera camera, ClientLevel level, float renderDistance, DeltaTracker deltaTracker,
                                   CallbackInfo ci){
-        if (JabsFixedWorldAndUIClient.fog_21_6.get()) {
-            fog.environmentalEnd = lerp(renderDistance, 1024.0F, this.rainFogMultiplier) + -256.0F * this.rainFogMultiplier;
-            fog.environmentalStart = lerp(renderDistance-Math.min(64f, renderDistance / 2), this.rainFogMultiplier * -160.0F, this.rainFogMultiplier);
-        }
+        if (!JabsFixedWorldAndUIClient.jabsFog.get()) return;
+        fog.environmentalEnd = lerp(renderDistance, 1024.0F, this.rainFogMultiplier) + -256.0F * this.rainFogMultiplier;
+        fog.environmentalStart = lerp(renderDistance-Math.min(64f, renderDistance / 2), this.rainFogMultiplier * -160.0F, this.rainFogMultiplier);
 
         Entity entity = camera.entity();
         float palefog = JabsFixedWorldAndUIClient.paleGardenFog;
@@ -44,7 +43,7 @@ public abstract class AtmosphericFogEnvironmentMixin {
         float inverseSkyLight = 1 - (entity.level().getBrightness(LightLayer.SKY, entity.blockPosition()) / 15f);
         float height = (float) (1 - ((entity.level().dimensionType().minY() - (entity.position().y - 4)) / -10f));
         float toVoid = entity.level().dimension().identifier().toString().toLowerCase().contains("overworld")?
-               Mth.clamp(inverseSkyLight * height, 0, 1) : 0;
+                Mth.clamp(inverseSkyLight * height, 0, 1) : 0;
         if (Math.abs(toVoid-voidFog)>0.0)
             if (toVoid > voidFog) JabsFixedWorldAndUIClient.voidFog = Math.min(voidFog + (float) (delta * Math.sqrt(1 - voidFog * voidFog) * 0.01f), 1);
             else JabsFixedWorldAndUIClient.voidFog = Math.max(voidFog - delta * 0.01f, 0);
@@ -61,6 +60,5 @@ public abstract class AtmosphericFogEnvironmentMixin {
             fog.skyEnd = lerp(renderDistance, fog.environmentalEnd, newFog);
             fog.cloudEnd = lerp(Minecraft.getInstance().options.cloudRange().get() * 16, fog.environmentalEnd, newFog);
         }
-
     }
 }

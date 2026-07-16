@@ -1,5 +1,6 @@
 package net.greenjab.jabsfixedworldandui.mixin.structure;
 
+import net.greenjab.jabsfixedworldandui.JabsFixedWorldAndUI;
 import net.greenjab.jabsfixedworldandui.registries.LootTableRegistry;
 import net.minecraft.IdentifierException;
 import net.minecraft.core.BlockPos;
@@ -34,6 +35,8 @@ public abstract class WoodlandMansionStructureMixin {
     private void placeHallwayDecorations(WorldGenLevel level, StructureManager structureManager, ChunkGenerator generator,
                                          RandomSource random, BoundingBox chunkBB, ChunkPos chunkPos, PiecesContainer pieces,
                                          CallbackInfo ci) {
+        if (!JabsFixedWorldAndUI.isChangesEnabled("structures")) return;
+
         BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos();
         BoundingBox boundingBox = pieces.calculateBoundingBox();
 
@@ -46,10 +49,11 @@ public abstract class WoodlandMansionStructureMixin {
                             StructureTemplateManager manager = serverLevel.getStructureManager();
                             Optional<StructureTemplate> maybeStructureTemplate;
                             try {
-                                maybeStructureTemplate = manager.get(Identifier.parse("minecraft:woodland_mansion/decorations/"+(random.nextInt(11))));
-                                StructureTemplate structureTemplate = maybeStructureTemplate.get();
-                                StructurePlaceSettings placeSettings = new StructurePlaceSettings().setKnownShape(false).setRotation(Rotation.getRandom(random));
-                                structureTemplate.placeInWorld(level, pos, pos, placeSettings, StructureBlockEntity.createRandom(0), 2);
+                                maybeStructureTemplate = manager.get(Identifier.parse("minecraft:woodland_mansion.json/decorations/"+(random.nextInt(11))));
+                                maybeStructureTemplate.ifPresent(structureTemplate -> {
+                                    StructurePlaceSettings placeSettings = new StructurePlaceSettings().setKnownShape(false).setRotation(Rotation.getRandom(random));
+                                    structureTemplate.placeInWorld(level, pos, pos, placeSettings, StructureBlockEntity.createRandom(0), 2);
+                                });
                             } catch (IdentifierException _) {
                             }
                         }

@@ -1,5 +1,6 @@
 package net.greenjab.jabsfixedworldandui.mixin.structure;
 
+import net.greenjab.jabsfixedworldandui.JabsFixedWorldAndUI;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntitySpawnReason;
@@ -20,6 +21,7 @@ public abstract class WoodlandMansionPieceMixin {
     @Inject(method = "handleDataMarker", at = @At(value = "HEAD"), cancellable = true)
     private void spawnMoreIllagers(String markerId, BlockPos position, ServerLevelAccessor level, RandomSource random,
                                                 BoundingBox chunkBB, CallbackInfo ci) {
+        if (!JabsFixedWorldAndUI.isChangesEnabled("structures")) return;
         if (markerId.startsWith("Illager")) {
             Mob mob;
             int i = random.nextInt(20);

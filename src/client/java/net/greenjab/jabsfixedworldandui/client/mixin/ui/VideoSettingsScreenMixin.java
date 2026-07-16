@@ -16,8 +16,8 @@ public abstract class VideoSettingsScreenMixin {
     private static void armorHudOption(Options options, CallbackInfoReturnable<OptionInstance<?>[]> cir){
         cir.setReturnValue(new OptionInstance[]{
                 options.framerateLimit(), options.enableVsync(), options.inactivityFpsLimit(), options.guiScale(), options.fullscreen(), options.gamma(),
-                JabsFixedWorldAndUIClient.newArmorHud,
-                JabsFixedWorldAndUIClient.fog_21_6
+                JabsFixedWorldAndUIClient.itemArmorHud,
+                JabsFixedWorldAndUIClient.jabsFog
         });
     }
 }

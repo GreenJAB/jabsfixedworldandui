@@ -1,5 +1,6 @@
 package net.greenjab.jabsfixedworldandui.mixin.structure;
 
+import net.greenjab.jabsfixedworldandui.JabsFixedWorldAndUI;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.levelgen.Aquifer;
 import net.minecraft.world.level.levelgen.NoiseChunk;
@@ -38,7 +39,7 @@ public abstract class NoiseBasedAquifierMixin {
 
     @Inject(method = "<clinit>", at = @At(value = "TAIL"))
     private static void restoreOldSamplingOffsets(CallbackInfo ci) {
-        if (Arrays.deepEquals(SURFACE_SAMPLING_OFFSETS_IN_CHUNKS, SURFACE_SAMPLING_OFFSETS_IN_CHUNKS_1_19_3)) {
+        if (JabsFixedWorldAndUI.isChangesEnabled("terrain") && Arrays.deepEquals(SURFACE_SAMPLING_OFFSETS_IN_CHUNKS, SURFACE_SAMPLING_OFFSETS_IN_CHUNKS_1_19_3)) {
             SURFACE_SAMPLING_OFFSETS_IN_CHUNKS = SURFACE_SAMPLING_OFFSETS_IN_CHUNKS_PRE_1_19_3;
         }
     }
@@ -47,6 +48,6 @@ public abstract class NoiseBasedAquifierMixin {
     private void disableSkipSamplingAboveY(NoiseChunk noiseChunk, ChunkPos pos, NoiseRouter router,
                                            PositionalRandomFactory positionalRandomFactory, int minBlockY, int yBlockSize,
                                            Aquifer.FluidPicker globalFluidPicker, CallbackInfo ci) {
-        this.skipSamplingAboveY = Integer.MAX_VALUE;
+        if (JabsFixedWorldAndUI.isChangesEnabled("terrain")) this.skipSamplingAboveY = Integer.MAX_VALUE;
     }
 }

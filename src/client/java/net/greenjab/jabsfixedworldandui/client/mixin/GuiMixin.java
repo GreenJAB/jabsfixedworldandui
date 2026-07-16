@@ -69,7 +69,7 @@ public abstract class GuiMixin {
              value = "INVOKE",
              target = "Lnet/minecraft/client/gui/Gui;extractArmor(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/world/entity/player/Player;IIII)V"))
     private void renderArmorItems(GuiGraphicsExtractor graphics, Player player, int yLineBase, int numHealthRows, int healthRowHeight, int xLeft){
-         if (JabsFixedWorldAndUIClient.newArmorHud.get()) {
+         if (JabsFixedWorldAndUIClient.itemArmorHud.get()) {
              Minecraft client = Minecraft.getInstance();
              assert client.player != null;
              ArrayList<ItemStack> armor = JabsFixedWorldAndUI.getArmorBypass(client.player);

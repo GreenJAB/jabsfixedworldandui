@@ -21,7 +21,7 @@
     "advancements.adventure.kill_with_tnt.description": "הרוג מפלצת באמצעות TNT",
     "advancements.adventure.kill_the_warden.title": "אם זה מדמם",
     "advancements.adventure.kill_the_warden.description": "הרוג אתת הוורדן",
-    "options.newArmorHud" : "הצג שריון ב-HUD",
+    "options.itemArmorHud" : "הצג שריון ב-HUD",
     "world.moon.full_moon": "\uD83C\uDFA3 אַגַן הַסַהַר",
     "world.moon.waning_gibbous": "גיבוס דועך",
     "world.moon.third_quarter": "\uD83D\uDE9C רבעון שלישי",
@@ -30,6 +30,6 @@
     "world.moon.waxing_crescent": "סהר שעווה",
     "world.moon.first_quarter": "רבעון ראשון ⛏",
     "world.moon.waxing_gibbous": "שעווה Gibbous",
-    "options.fog_21_6": "Disable 1.21.6 Fog",
+    "options.jabsFog": "Disable 1.21.6 Fog",
     "generator.jabsfixedworldandui.floating_islands": "Floating Islands"
 }

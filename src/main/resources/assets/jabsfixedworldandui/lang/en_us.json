@@ -24,8 +24,9 @@
     "advancements.adventure.kill_the_warden.description": "Slay the Warden",
     "advancements.adventure.level_100.title": "Level Up",
     "advancements.adventure.level_100.description": "Reach Level 100",
-    "options.newArmorHud" : "Show Armor in HUD",
-    "options.fog_21_6" : "Disable 1.21.6 Fog",
+    "options.itemArmorHud" : "Show Armor in HUD",
+    "options.jabsFog" : "Jabs Fog",
+    "options.jabsFog.tooltip" : "Disables 1.21.6 Fog that makes everything gray. Adds Pale Garden and Void fog",
     "world.moon.null": "",
     "world.moon.full_moon": "Full Moon",
     "world.moon.fish": " \uD83C\uDFA3",
@@ -42,5 +43,8 @@
     "generator.jabsfixedworldandui.floating_islands": "Floating Islands",
     "key.jabsfixedworldandui.hotbar_cycle": "Hotbar Cycle (Hold)",
     "trim_material.jabsfixedworldandui.coal": "Coal Material",
-    "item.tags": "#%s"
+    "item.tags": "#%s",
+
+    "gamerule.category.jabsfixedworldandui.aae_jabsfixedworldandui": "Jabs Fixed World and UI",
+    "gamerule.jabsfixedworldandui.biome_ores": "Generate bonus ores in specific biomes (i.e. coal/vines in jungles/swamps)"
 }

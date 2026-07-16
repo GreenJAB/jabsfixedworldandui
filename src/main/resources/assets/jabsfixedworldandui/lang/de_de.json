@@ -21,7 +21,7 @@
     "advancements.adventure.kill_with_tnt.description": "Töte einen Monster mit TNT",
     "advancements.adventure.kill_the_warden.title": "Wenn es blutet",
     "advancements.adventure.kill_the_warden.description": "Töte den Wärter",
-    "options.newArmorHud" : "Panzerung im HUD anzeigen",
+    "options.itemArmorHud" : "Panzerung im HUD anzeigen",
     "world.moon.full_moon": "Vollmond \uD83C\uDFA3",
     "world.moon.waning_gibbous": "Abnehmender Dreiviertelmond",
     "world.moon.third_quarter": "Drittes Viertel \uD83D\uDE9C",
@@ -30,6 +30,6 @@
     "world.moon.waxing_crescent": "Wachsender Halbmond",
     "world.moon.first_quarter": "Erstes Viertel ⛏",
     "world.moon.waxing_gibbous": "Zunehmender Dreiviertelmond",
-    "options.fog_21_6": "Disable 1.21.6 Fog",
+    "options.jabsFog": "Disable 1.21.6 Fog",
     "generator.jabsfixedworldandui.floating_islands": "Floating Islands"
 }
