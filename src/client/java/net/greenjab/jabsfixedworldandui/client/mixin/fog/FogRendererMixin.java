@@ -24,7 +24,7 @@ public abstract class FogRendererMixin  {
             target = "Lnet/minecraft/client/renderer/fog/environment/FogEnvironment;getBaseColor(Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/Camera;IF)I"))
     private int undergroundDarkness(int original, @Local(ordinal = 0) FogEnvironment colorSourceEnvironment,
                                     @Local(argsOnly = true) ClientLevel level, @Local(argsOnly = true) Camera camera) {
-        if (!JabsFixedWorldAndUIClient.jabsFog.get()) return original;
+        if (!JabsFixedWorldAndUIClient.jabsFixedFog.get()) return original;
         if (!level.dimensionType().hasSkyLight()) return original;
         if (camera.entity().isSpectator() && level.getBlockState(BlockPos.containing(camera.entity().getEyePosition())).isSolidRender()) return original;
         if (!colorSourceEnvironment.toString().toLowerCase().contains("atmospheric")) return original;

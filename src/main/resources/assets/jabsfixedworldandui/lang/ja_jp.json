@@ -25,7 +25,7 @@
     "advancements.adventure.kill_the_warden.title": "血を流すならば",
     "advancements.adventure.kill_the_warden.description": "ウォーデンを討伐する",
     "options.itemArmorHud": "HUDに防具を表示",
-    "options.jabsFog": "1.21.6の霧を無効化",
+    "options.jabsFixedFog": "1.21.6の霧を無効化",
     "world.moon.full_moon": "満月 \uD83C\uDFA3",
     "world.moon.waning_gibbous": "寝待月",
     "world.moon.third_quarter": "下弦の月 \uD83D\uDE9C",

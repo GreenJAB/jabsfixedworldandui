@@ -30,6 +30,6 @@
     "world.moon.waxing_crescent": "Croissant de cire",
     "world.moon.first_quarter": "Premier trimestre ⛏",
     "world.moon.waxing_gibbous": "Gibbeuse croissante",
-    "options.jabsFog": "Disable 1.21.6 Fog",
+    "options.jabsFixedFog": "Disable 1.21.6 Fog",
     "generator.jabsfixedworldandui.floating_islands": "Floating Islands"
 }

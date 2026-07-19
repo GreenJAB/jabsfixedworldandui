@@ -22,7 +22,7 @@
     "advancements.adventure.kill_the_warden.title": "若它会流血",
     "advancements.adventure.kill_the_warden.description": "杀死守卫者",
     "options.itemArmorHud": "在屏幕上显示护甲状态",
-    "options.jabsFog": "停用 1.21.6 版本的雾效",
+    "options.jabsFixedFog": "停用 1.21.6 版本的雾效",
     "world.moon.full_moon": "满月 \uD83C\uDFA3",
     "world.moon.waning_gibbous": "亏凸月",
     "world.moon.third_quarter": "下弦月 \uD83D\uDE9C",

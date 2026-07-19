@@ -22,7 +22,7 @@
     "advancements.adventure.kill_the_warden.title": "If It Bleeds",
     "advancements.adventure.kill_the_warden.description": "Slay the Warden",
     "options.itemArmorHud" : "Show Armour in HUD",
-    "options.jabsFog" : "Disable 1.21.6 Fog",
+    "options.jabsFixedFog": "Disable 1.21.6 Fog",
     "world.moon.full_moon": "Full Moon \uD83C\uDFA3",
     "world.moon.waning_gibbous": "Waning Gibbous",
     "world.moon.third_quarter": "Third Quarter \uD83D\uDE9C",

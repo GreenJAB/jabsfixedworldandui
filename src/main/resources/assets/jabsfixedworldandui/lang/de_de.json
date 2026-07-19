@@ -30,6 +30,6 @@
     "world.moon.waxing_crescent": "Wachsender Halbmond",
     "world.moon.first_quarter": "Erstes Viertel ⛏",
     "world.moon.waxing_gibbous": "Zunehmender Dreiviertelmond",
-    "options.jabsFog": "Disable 1.21.6 Fog",
+    "options.jabsFixedFog": "Disable 1.21.6 Fog",
     "generator.jabsfixedworldandui.floating_islands": "Floating Islands"
 }

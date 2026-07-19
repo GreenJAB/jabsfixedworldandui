@@ -22,7 +22,7 @@
     "advancements.adventure.kill_the_warden.title": "Pokud krvácí",
     "advancements.adventure.kill_the_warden.description": "Poražte vartýře",
     "options.itemArmorHud" : "Zobrazit brnění v HUD",
-    "options.jabsFog" : "Vypnout mlhu 1.21.6",
+    "options.jabsFixedFog": "Vypnout mlhu 1.21.6",
     "world.moon.full_moon": "Úplněk \uD83C\uDFA3",
     "world.moon.waning_gibbous": "Couvající vypouklý měsíc",
     "world.moon.third_quarter": "Poslední čtvrť \uD83D\uDE9C",

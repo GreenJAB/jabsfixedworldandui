@@ -40,14 +40,14 @@ public class JabsFixedWorldAndUI implements ModInitializer {
 
 		FabricLoader.getInstance().getModContainer(NAMESPACE).ifPresent(modContainer -> {
 					ResourceManagerHelper.registerBuiltinResourcePack(
-							JabsFixedWorldAndUI.id("worldgen_changes"),
+							JabsFixedWorldAndUI.id("terrain_changes"),
 							modContainer,
-							Component.nullToEmpty("jabsfixedworldandui.worldgen_changes"),
+							Component.translatable("jabsfixedworldandui.terrain_changes"),
 							ResourcePackActivationType.DEFAULT_ENABLED);
 					ResourceManagerHelper.registerBuiltinResourcePack(
 							JabsFixedWorldAndUI.id("structure_changes"),
 							modContainer,
-							Component.nullToEmpty("jabsfixedworldandui.structure_changes"),
+							Component.translatable("jabsfixedworldandui.structure_changes"),
 							ResourcePackActivationType.DEFAULT_ENABLED);
 		});
 	}

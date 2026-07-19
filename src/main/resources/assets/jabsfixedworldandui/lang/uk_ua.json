@@ -30,6 +30,6 @@
     "world.moon.waxing_crescent": "Зростаючий півмісяць",
     "world.moon.first_quarter": "Перша чверть ⛏",
     "world.moon.waxing_gibbous": "Восковий Гіббус",
-    "options.jabsFog": "Disable 1.21.6 Fog",
+    "options.jabsFixedFog": "Disable 1.21.6 Fog",
     "generator.jabsfixedworldandui.floating_islands": "Floating Islands"
 }

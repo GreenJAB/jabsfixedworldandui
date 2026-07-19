@@ -30,6 +30,6 @@
     "world.moon.waxing_crescent": "סהר שעווה",
     "world.moon.first_quarter": "רבעון ראשון ⛏",
     "world.moon.waxing_gibbous": "שעווה Gibbous",
-    "options.jabsFog": "Disable 1.21.6 Fog",
+    "options.jabsFixedFog": "Disable 1.21.6 Fog",
     "generator.jabsfixedworldandui.floating_islands": "Floating Islands"
 }

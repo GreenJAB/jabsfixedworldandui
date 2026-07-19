@@ -28,7 +28,7 @@ public abstract class AtmosphericFogEnvironmentMixin {
     @Inject(method = "setupFog", at = @At(value = "TAIL"))
     private void revertAndNewFog(FogData fog, Camera camera, ClientLevel level, float renderDistance, DeltaTracker deltaTracker,
                                   CallbackInfo ci){
-        if (!JabsFixedWorldAndUIClient.jabsFog.get()) return;
+        if (!JabsFixedWorldAndUIClient.jabsFixedFog.get()) return;
         fog.environmentalEnd = lerp(renderDistance, 1024.0F, this.rainFogMultiplier) + -256.0F * this.rainFogMultiplier;
         fog.environmentalStart = lerp(renderDistance-Math.min(64f, renderDistance / 2), this.rainFogMultiplier * -160.0F, this.rainFogMultiplier);
 

@@ -13,7 +13,7 @@ public class JabsFixedWorldAndUIClient implements ClientModInitializer {
 	public static float paleGardenFog = 0f;
 	public static float voidFog = 0f;
 	public static OptionInstance<Boolean> itemArmorHud = OptionInstance.createBoolean("options.itemArmorHud", true);
-	public static OptionInstance<Boolean> jabsFog = OptionInstance.createBoolean("options.jabsFog", true);
+	public static OptionInstance<Boolean> jabsFixedFog = OptionInstance.createBoolean("options.jabsFixedFog", true);
 
 	@Override
 	public void onInitializeClient() {

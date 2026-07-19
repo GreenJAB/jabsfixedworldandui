@@ -22,7 +22,7 @@
     "advancements.adventure.kill_the_warden.title": "Se Sangra...",
     "advancements.adventure.kill_the_warden.description": "Derrote o Guardião",
     "options.itemArmorHud": "Mostrar Armadura no HUD",
-    "options.jabsFog": "Desativar Névoa da 1.21.6",
+    "options.jabsFixedFog": "Desativar Névoa da 1.21.6",
 
     "world.moon.full_moon": "Lua Cheia \uD83C\uDFA3",
     "world.moon.waning_gibbous": "Minguante Gibosa",

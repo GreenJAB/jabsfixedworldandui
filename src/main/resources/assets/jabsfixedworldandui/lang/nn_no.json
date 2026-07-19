@@ -25,7 +25,7 @@
     "advancements.adventure.kill_the_warden.title": "Om det blør",
     "advancements.adventure.kill_the_warden.description": "Drep ein vord",
     "options.itemArmorHud" : "Syn rustning i HUD",
-    "options.jabsFog" : "Skru av 1.21.6 tåke",
+    "options.jabsFixedFog": "Skru av 1.21.6 tåke",
     "world.moon.full_moon": "Fullmåne \uD83C\uDFA3",
     "world.moon.waning_gibbous": "Avtakande fullmåne",
     "world.moon.third_quarter": "Siste kvarter \uD83D\uDE9C",
