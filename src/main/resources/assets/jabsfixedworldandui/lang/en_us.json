@@ -33,7 +33,7 @@
     "world.moon.full_moon": "Full Moon",
     "world.moon.fish": " \uD83C\uDFA3",
     "world.moon.waning_gibbous": "Waning Gibbous",
-    "world.moon.third_quarter": "Third Quarter \uD83D\uDE9C",
+    "world.moon.third_quarter": "Third Quarter",
     "world.moon.farm": " \uD83D\uDE9C",
     "world.moon.waning_crescent": "Waning Crescent",
     "world.moon.new_moon": "New Moon",
@@ -47,6 +47,5 @@
     "trim_material.jabsfixedworldandui.coal": "Coal Material",
     "item.tags": "#%s",
 
-    "gamerule.category.jabsfixedworldandui.aae_jabsfixedworldandui": "Jabs Fixed World and UI",
-    "gamerule.jabsfixedworldandui.biome_ores": "Generate bonus ores in specific biomes (i.e. coal/vines in jungles/swamps)"
+    "gamerule.category.jabsfixedworldandui.aae_jabsfixedworldandui": "Jabs Fixed World and UI"
 }

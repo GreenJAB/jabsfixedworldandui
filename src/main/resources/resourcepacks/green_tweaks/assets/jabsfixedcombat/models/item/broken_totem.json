@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/smaller_util",
   "textures": {
-      "layer0": "fixedminecraft:item/broken_totem"
+      "layer0": "jabsfixedcombat:item/broken_totem"
   }
 }

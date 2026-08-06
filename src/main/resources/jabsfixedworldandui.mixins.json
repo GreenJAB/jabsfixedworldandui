@@ -17,6 +17,7 @@
     "inventory.CraftingInventoryAccessor",
     "inventory.InventoryMenuMixin",
     "inventory.InventoryMixin",
+    "inventory.ItemStackMixin",
     "inventory.PlayerMixin",
     "inventory.ProjectileWeaponItemMixin",
     "inventory.ServerPlayerMixin",

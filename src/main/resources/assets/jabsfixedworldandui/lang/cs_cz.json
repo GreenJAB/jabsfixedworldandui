@@ -23,13 +23,13 @@
     "advancements.adventure.kill_the_warden.description": "Poražte vartýře",
     "options.itemArmorHud" : "Zobrazit brnění v HUD",
     "options.jabsFixedFog": "Vypnout mlhu 1.21.6",
-    "world.moon.full_moon": "Úplněk \uD83C\uDFA3",
+    "world.moon.full_moon": "Úplněk",
     "world.moon.waning_gibbous": "Couvající vypouklý měsíc",
-    "world.moon.third_quarter": "Poslední čtvrť \uD83D\uDE9C",
+    "world.moon.third_quarter": "Poslední čtvrť",
     "world.moon.waning_crescent": "Couvající srpek",
-    "world.moon.new_moon": "Nov ⚔",
+    "world.moon.new_moon": "Nov",
     "world.moon.waxing_crescent": "Dorůstající srpek",
-    "world.moon.first_quarter": "První čtvrť ⛏",
+    "world.moon.first_quarter": "První čtvrť",
     "world.moon.waxing_gibbous": "Dorůstající vypouklý měsíc",
     "generator.jabsfixedworldandui.floating_islands": "Létající ostrovy"
 }

@@ -20,7 +20,6 @@ public class ModTags {
     public static final TagKey<Biome> HAS_BONUS_REDSTONE = TagKey.create(Registries.BIOME, JabsFixedWorldAndUI.id("has_bonus_redstone"));
     public static final TagKey<Biome> HAS_BONUS_DEBRIS = TagKey.create(Registries.BIOME, JabsFixedWorldAndUI.id("has_bonus_debris"));
 
-
     public static final TagKey<Item> HAS_WAYPOINTS = TagKey.create(Registries.ITEM, JabsFixedWorldAndUI.id("has_waypoints"));
 
 }

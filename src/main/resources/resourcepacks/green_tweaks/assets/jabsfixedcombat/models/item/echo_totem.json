@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/smaller_util",
     "textures": {
-        "layer0": "fixedminecraft:item/echo_totem"
+        "layer0": "jabsfixedcombat:item/echo_totem"
     }
 }

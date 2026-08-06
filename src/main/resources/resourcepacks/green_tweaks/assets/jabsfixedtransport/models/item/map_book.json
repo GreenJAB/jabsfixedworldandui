@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/smaller_util",
   "textures": {
-      "layer0": "fixedminecraft:item/map_book"
+      "layer0": "jabsfixedtransport:item/map_book"
   }
 }

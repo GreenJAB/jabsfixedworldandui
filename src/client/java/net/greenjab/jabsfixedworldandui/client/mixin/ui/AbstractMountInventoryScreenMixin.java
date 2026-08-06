@@ -25,13 +25,13 @@ public abstract class AbstractMountInventoryScreenMixin {
 
         LivingEntity entity = AMIS.getMenu().mount;
         if (entity != null) {
-            if (entity instanceof Horse) {
+            if (entity instanceof Horse || entity instanceof ZombieHorse) {
                 ((CustomContainerTextureHolder) AMIS).jabsfixedworldandui$setCustomTexture("/horse");
             } else if (entity instanceof Donkey || (entity instanceof Mule && !FabricLoader.getInstance().isModLoaded("jabsfixedtransport"))) {
                 ((CustomContainerTextureHolder) AMIS).jabsfixedworldandui$setCustomTexture("/donkey");
             } else if (entity instanceof Mule) {
                     ((CustomContainerTextureHolder) AMIS).jabsfixedworldandui$setCustomTexture("/mule");
-            } else if (entity instanceof Camel) {
+            } else if (entity instanceof Camel || entity instanceof SkeletonHorse) {
                 ((CustomContainerTextureHolder) AMIS).jabsfixedworldandui$setCustomTexture("/camel");
             } else if (entity instanceof Llama || entity instanceof TraderLlama) {
                 ((CustomContainerTextureHolder) AMIS).jabsfixedworldandui$setCustomTexture("/llama");

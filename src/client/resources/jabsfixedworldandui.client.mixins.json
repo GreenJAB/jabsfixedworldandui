@@ -13,7 +13,7 @@
     "FireworkParticlesMixin",
     "GuiMixin",
     "fog.AtmosphericFogEnvironmentMixin",
-    "fog.FogRendererMixin",
+    "fog.LavaFogEnvironmentMixin",
     "fog.OptionsMixin",
     "ui.AbstractContainerScreenMixin",
     "ui.AbstractMountInventoryScreenMixin",

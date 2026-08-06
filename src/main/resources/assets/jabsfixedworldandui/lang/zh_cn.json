@@ -23,13 +23,13 @@
     "advancements.adventure.kill_the_warden.description": "杀死守卫者",
     "options.itemArmorHud": "在屏幕上显示护甲状态",
     "options.jabsFixedFog": "停用 1.21.6 版本的雾效",
-    "world.moon.full_moon": "满月 \uD83C\uDFA3",
+    "world.moon.full_moon": "满月",
     "world.moon.waning_gibbous": "亏凸月",
-    "world.moon.third_quarter": "下弦月 \uD83D\uDE9C",
+    "world.moon.third_quarter": "下弦月",
     "world.moon.waning_crescent": "残月",
-    "world.moon.new_moon": "新月 ⚔",
+    "world.moon.new_moon": "新月",
     "world.moon.waxing_crescent": "眉月",
-    "world.moon.first_quarter": "上弦月 ⛏",
+    "world.moon.first_quarter": "上弦月",
     "world.moon.waxing_gibbous": "盈凸月",
     "generator.jabsfixedworldandui.floating_islands": "浮空岛"
 }

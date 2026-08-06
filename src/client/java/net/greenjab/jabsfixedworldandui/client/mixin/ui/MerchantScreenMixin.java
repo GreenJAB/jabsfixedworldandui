@@ -1,5 +1,7 @@
 package net.greenjab.jabsfixedworldandui.client.mixin.ui;
 
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.greenjab.jabsfixedworldandui.client.JabsFixedWorldAndUIClient;
 import net.greenjab.jabsfixedworldandui.client.CustomContainerTextureHolder;
@@ -22,7 +24,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Objects;
@@ -30,10 +31,8 @@ import java.util.Objects;
 @Mixin(MerchantScreen.class)
 public abstract class MerchantScreenMixin {
 
-    @Redirect(method = "extractLabels", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/network/chat/Component;translatable(Ljava/lang/String;[Ljava/lang/Object;)Lnet/minecraft/network/chat/MutableComponent;"
-    ))
-    private MutableComponent reverseProfessionSkillTitle(String key, Object[] args) {
+    @WrapOperation(method = "extractLabels", at = @At(value = "INVOKE", target = "Lnet/minecraft/network/chat/Component;translatable(Ljava/lang/String;[Ljava/lang/Object;)Lnet/minecraft/network/chat/MutableComponent;"))
+    private MutableComponent reverseProfessionSkillTitle(String key, Object[] args, Operation<MutableComponent> original) {
         MerchantScreen MS = (MerchantScreen) (Object)this;
         int traderLevel = MS.getMenu().getTraderLevel();
         if (MS.getTitle().getContents() instanceof TranslatableContents)
