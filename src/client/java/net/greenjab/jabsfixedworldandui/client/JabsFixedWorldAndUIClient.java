@@ -12,7 +12,7 @@ import net.minecraft.network.chat.Component;
 public class JabsFixedWorldAndUIClient implements ClientModInitializer {
 	public static float paleGardenFog = 0f;
 	public static float voidFog = 0f;
-	public static OptionInstance<Boolean> itemArmorHud = OptionInstance.createBoolean("options.itemArmorHud", true);
+	public static OptionInstance<Boolean> itemArmorHud = OptionInstance.createBoolean("options.itemArmorHud", false);
 	public static OptionInstance<Boolean> jabsFixedFog = OptionInstance.createBoolean("options.jabsFixedFog", true);
 
 	@Override

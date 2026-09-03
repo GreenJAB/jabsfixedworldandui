@@ -3,7 +3,6 @@ package net.greenjab.jabsfixedworldandui.other;
 import net.greenjab.jabsfixedworldandui.JabsFixedWorldAndUI;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 
 public class ModTags {
@@ -19,7 +18,5 @@ public class ModTags {
     public static final TagKey<Biome> HAS_BONUS_LAPIS = TagKey.create(Registries.BIOME, JabsFixedWorldAndUI.id("has_bonus_lapis"));
     public static final TagKey<Biome> HAS_BONUS_REDSTONE = TagKey.create(Registries.BIOME, JabsFixedWorldAndUI.id("has_bonus_redstone"));
     public static final TagKey<Biome> HAS_BONUS_DEBRIS = TagKey.create(Registries.BIOME, JabsFixedWorldAndUI.id("has_bonus_debris"));
-
-    public static final TagKey<Item> HAS_WAYPOINTS = TagKey.create(Registries.ITEM, JabsFixedWorldAndUI.id("has_waypoints"));
 
 }

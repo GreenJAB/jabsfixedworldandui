@@ -29,11 +29,25 @@ public abstract class ItemStackMixin {
         }
         if (itemStack.getComponents().has(DataComponents.BLOCK_ENTITY_DATA)) {
             TypedEntityData<BlockEntityType<?>> data = itemStack.getComponents().get(DataComponents.BLOCK_ENTITY_DATA);
-            if (data != null && data.type() == BlockEntityType.BRUSHABLE_BLOCK) {
-                ItemStack item = data.copyTagWithoutId().read("item", ItemStack.CODEC).orElse(ItemStack.EMPTY);
-                if (item!=ItemStack.EMPTY) {
-                    ItemContainerContents toolTip = ItemContainerContents.fromItems(List.of(item));
-                    cir.setReturnValue(Optional.ofNullable(toolTip).map(ContainerTooltipData::new));
+            if (data != null) {
+                if (data.type() == BlockEntityType.BRUSHABLE_BLOCK) {
+                    ItemStack item = data.copyTagWithoutId().read("item", ItemStack.CODEC).orElse(ItemStack.EMPTY);
+                    if (item != ItemStack.EMPTY) {
+                        ItemContainerContents toolTip = ItemContainerContents.fromItems(List.of(item));
+                        cir.setReturnValue(Optional.ofNullable(toolTip).map(ContainerTooltipData::new));
+                    }
+                } else if (data.type() == BlockEntityType.JUKEBOX) {
+                    ItemStack item = data.copyTagWithoutId().read("RecordItem", ItemStack.CODEC).orElse(ItemStack.EMPTY);
+                    if (item != ItemStack.EMPTY) {
+                        ItemContainerContents toolTip = ItemContainerContents.fromItems(List.of(item));
+                        cir.setReturnValue(Optional.ofNullable(toolTip).map(ContainerTooltipData::new));
+                    }
+                } else if (data.type() == BlockEntityType.LECTERN) {
+                    ItemStack item = data.copyTagWithoutId().read("Book", ItemStack.CODEC).orElse(ItemStack.EMPTY);
+                    if (item != ItemStack.EMPTY) {
+                        ItemContainerContents toolTip = ItemContainerContents.fromItems(List.of(item));
+                        cir.setReturnValue(Optional.ofNullable(toolTip).map(ContainerTooltipData::new));
+                    }
                 }
             }
         }
