@@ -12,3 +12,4 @@ accessible class net/minecraft/world/level/levelgen/structure/structures/Woodlan
 accessible class net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$MansionGrid
 accessible field net/minecraft/world/level/storage/loot/BuiltInLootTables LOCATIONS Ljava/util/Set;
 accessible field net/minecraft/world/entity/item/ItemEntity age I
+accessible class net/minecraft/client/StringSplitter$LineBreakFinder

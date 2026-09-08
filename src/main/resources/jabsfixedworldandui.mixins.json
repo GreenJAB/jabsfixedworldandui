@@ -28,6 +28,8 @@
     "other.ItemStackMixin",
     "other.MinecraftServerMixin",
     "other.SpawnArmorTrimsCommandMixin",
+    "other.StringDecomposerMixin",
+    "other.StringUtilMixin",
     "other.TrimMaterialsMixin",
     "other.VineBlockMixin",
     "structure.BlockAgeProcessorMixin",
