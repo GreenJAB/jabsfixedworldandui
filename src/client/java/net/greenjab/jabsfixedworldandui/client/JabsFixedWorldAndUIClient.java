@@ -34,6 +34,12 @@ public class JabsFixedWorldAndUIClient implements ClientModInitializer {
 					Component.translatable("jabsfixedworldandui.recolourful_containers"),
 					ResourcePackActivationType.NORMAL
 			);
+			ResourceManagerHelper.registerBuiltinResourcePack(
+					JabsFixedWorldAndUI.id( "fixed_pacp"),
+					modContainer,
+					Component.translatable("jabsfixedworldandui.fixed_pacp"),
+					ResourcePackActivationType.NORMAL
+			);
 		});
 	}
 	public static boolean usingCustomContainers() {

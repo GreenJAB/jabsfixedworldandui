@@ -45,7 +45,8 @@ public abstract class ShulkerBoxScreenMixin {
             if (blockState.is(BlockTags.SHULKER_BOXES)) {
                 String[] type = BuiltInRegistries.BLOCK.wrapAsHolder(blockState.getBlock()).getRegisteredName().split(":");
                 if (!Objects.equals(type[0], "minecraft")) return;
-                ((CustomContainerTextureHolder) MS).jabsfixedworldandui$setCustomTexture("/" + type[1].split("_")[0]);
+                String[] name = type[1].split("_");
+                ((CustomContainerTextureHolder) MS).jabsfixedworldandui$setCustomTexture("/" + name[0]+(Objects.equals(name[0], "light") ? "_" + name[1]:""));
                 if (!MS.getTitle().getString().isEmpty())
                     ((CustomContainerTextureHolder) MS).jabsfixedworldandui$setCustomTexture(((CustomContainerTextureHolder) MS).jabsfixedworldandui$getCustomTexture() + "_label");
             }
