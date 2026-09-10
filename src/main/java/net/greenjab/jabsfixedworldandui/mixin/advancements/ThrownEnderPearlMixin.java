@@ -1,7 +1,7 @@
 package net.greenjab.jabsfixedworldandui.mixin.advancements;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrownEnderpearl;
 import net.minecraft.world.item.Items;

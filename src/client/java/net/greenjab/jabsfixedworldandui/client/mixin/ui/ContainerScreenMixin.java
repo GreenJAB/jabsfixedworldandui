@@ -42,13 +42,13 @@ public abstract class ContainerScreenMixin {
         if (blockHitResult != null) {
             BlockState blockState = Minecraft.getInstance().level.getBlockState(blockHitResult.getBlockPos());
             if (blockState.is(BlockTags.COPPER_CHESTS)) {
-                if (blockState.is(Blocks.COPPER_CHEST) || blockState.is(Blocks.WAXED_COPPER_CHEST))
+                if (blockState.is(Blocks.COPPER_CHEST.weathering().unaffected()) || blockState.is(Blocks.COPPER_CHEST.waxed().unaffected()))
                     ((CustomContainerTextureHolder) CS).jabsfixedworldandui$setCustomTexture("/copper");
-                else if (blockState.is(Blocks.EXPOSED_COPPER_CHEST) || blockState.is(Blocks.WAXED_EXPOSED_COPPER_CHEST))
+                else if (blockState.is(Blocks.COPPER_CHEST.weathering().exposed()) || blockState.is(Blocks.COPPER_CHEST.waxed().exposed()))
                     ((CustomContainerTextureHolder) CS).jabsfixedworldandui$setCustomTexture("/exposed_copper");
-                else if (blockState.is(Blocks.WEATHERED_COPPER_CHEST) || blockState.is(Blocks.WAXED_WEATHERED_COPPER_CHEST))
+                else if (blockState.is(Blocks.COPPER_CHEST.weathering().weathered()) || blockState.is(Blocks.COPPER_CHEST.waxed().weathered()))
                     ((CustomContainerTextureHolder) CS).jabsfixedworldandui$setCustomTexture("/weathered_copper");
-                else if (blockState.is(Blocks.OXIDIZED_COPPER_CHEST) || blockState.is(Blocks.WAXED_OXIDIZED_COPPER_CHEST))
+                else if (blockState.is(Blocks.COPPER_CHEST.weathering().oxidized()) || blockState.is(Blocks.COPPER_CHEST.waxed().oxidized()))
                     ((CustomContainerTextureHolder) CS).jabsfixedworldandui$setCustomTexture("/oxidized_copper");
                 if (CS.getMenu().getRowCount()==3)
                     ((CustomContainerTextureHolder) CS).jabsfixedworldandui$setCustomTexture(((CustomContainerTextureHolder) CS).jabsfixedworldandui$getCustomTexture() + "_small");

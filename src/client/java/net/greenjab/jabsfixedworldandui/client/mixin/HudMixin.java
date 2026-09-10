@@ -9,8 +9,8 @@ import net.greenjab.jabsfixedworldandui.JabsFixedWorldAndUI;
 import net.greenjab.jabsfixedworldandui.client.JabsFixedWorldAndUIClient;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.Hud;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.core.component.DataComponents;
@@ -43,8 +43,8 @@ import java.util.Locale;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
-@Mixin(Gui.class)
-public abstract class GuiMixin {
+@Mixin(Hud.class)
+public abstract class HudMixin {
 
     @Shadow @Final private Minecraft minecraft;
     @Shadow protected abstract void extractSlot(GuiGraphicsExtractor graphics, int x, int y, DeltaTracker deltaTracker, Player player,
@@ -53,12 +53,12 @@ public abstract class GuiMixin {
     @Shadow @org.jspecify.annotations.Nullable protected abstract LivingEntity getPlayerVehicleWithHealth();
     @Shadow private int displayHealth;
 
-    @ModifyExpressionValue(method = "extractPlayerHealth", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/Gui;getVehicleMaxHearts(Lnet/minecraft/world/entity/LivingEntity;)I"))
+    @ModifyExpressionValue(method = "extractPlayerHealth", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/Hud;getVehicleMaxHearts(Lnet/minecraft/world/entity/LivingEntity;)I"))
     private int renderFoodOnMount1(int constant) {
         return 0;
     }
 
-    @ModifyArg(method = "extractPlayerHealth", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/Gui;extractAirBubbles(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/world/entity/player/Player;III)V"), index = 2)
+    @ModifyArg(method = "extractPlayerHealth", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/Hud;extractAirBubbles(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/world/entity/player/Player;III)V"), index = 2)
     private int renderFoodOnMount2(int constant) {
         return this.getVehicleMaxHearts(this.getPlayerVehicleWithHealth());
     }
@@ -86,7 +86,7 @@ public abstract class GuiMixin {
         return original || (this.minecraft.options.keyPlayerList.isDown()&&!getCameraPlayer().isSpectator());
     }
 
-    @WrapOperation(method = "extractPlayerHealth", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/Gui;extractArmor(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/world/entity/player/Player;IIII)V"))
+    @WrapOperation(method = "extractPlayerHealth", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/Hud;extractArmor(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/world/entity/player/Player;IIII)V"))
     private void renderArmorItems(GuiGraphicsExtractor graphics, Player player, int yLineBase, int numHealthRows, int healthRowHeight, int xLeft, Operation<Void> original){
          if (JabsFixedWorldAndUIClient.itemArmorHud.get() || this.minecraft.options.keyPlayerList.isDown()) {
              Minecraft client = Minecraft.getInstance();
@@ -208,7 +208,7 @@ public abstract class GuiMixin {
     @Unique private static final Identifier SLOTS_TEXTURE = JabsFixedWorldAndUI.id("inv_scroll");
 
     @Inject(method = "extractItemHotbar", at = @At(value = "INVOKE",
-                                                   target = "Lnet/minecraft/client/gui/Gui;extractSlot(Lnet/minecraft/client/gui/GuiGraphicsExtractor;IILnet/minecraft/client/DeltaTracker;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;I)V", ordinal = 0))
+            target = "Lnet/minecraft/client/gui/Hud;extractSlot(Lnet/minecraft/client/gui/GuiGraphicsExtractor;IILnet/minecraft/client/DeltaTracker;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;I)V", ordinal = 0))
     private void previewInv(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker, CallbackInfo ci, @Local Player player, @Local(ordinal = 4) int i, @Local(ordinal = 5) int x, @Local(ordinal = 6) int y, @Local(ordinal = 3) int seed) {
         if (this.minecraft.options.keyPlayerList.isDown()){
             float maxHealth = Math.max((float)player.getAttributeValue(Attributes.MAX_HEALTH), this.displayHealth);
