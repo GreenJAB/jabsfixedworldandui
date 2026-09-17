@@ -29,6 +29,12 @@ public class JabsFixedWorldAndUIClient implements ClientModInitializer {
 					ResourcePackActivationType.NORMAL
 			);
 			ResourceManagerHelper.registerBuiltinResourcePack(
+					JabsFixedWorldAndUI.id( "wavy"),
+					modContainer,
+					Component.translatable("jabsfixedworldandui.wavy"),
+					ResourcePackActivationType.NORMAL
+			);
+			ResourceManagerHelper.registerBuiltinResourcePack(
 					JabsFixedWorldAndUI.id( "recolourful_containers"),
 					modContainer,
 					Component.translatable("jabsfixedworldandui.recolourful_containers"),
