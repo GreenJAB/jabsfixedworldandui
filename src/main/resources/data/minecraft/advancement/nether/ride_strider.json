@@ -8,17 +8,17 @@
                         "minecraft:warped_fungus_on_a_stick"
                     ]
                 },
-                "player": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "vehicle": {
-                                "minecraft:entity_type": "minecraft:strider"
-                            }
+                "player":
+                {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "vehicle": {
+                            "minecraft:entity_type": "minecraft:strider"
                         }
                     }
-                ]
+                }
+
             },
             "trigger": "minecraft:item_durability_changed"
         }

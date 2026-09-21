@@ -3,15 +3,15 @@
   "criteria": {
     "who_needs_rockets": {
       "conditions": {
-        "cause": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:wind_charge"
-            }
+        "cause":
+        {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wind_charge"
           }
-        ],
+        }
+      ,
         "distance": {
           "y": {
             "min": 7.0
@@ -38,8 +38,8 @@
       "who_needs_rockets"
     ]
   ],
-    "rewards": {
-        "experience": 300
-    },
+  "rewards": {
+    "experience": 300
+  },
   "sends_telemetry_event": true
 }

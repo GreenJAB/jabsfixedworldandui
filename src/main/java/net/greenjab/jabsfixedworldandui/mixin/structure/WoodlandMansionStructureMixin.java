@@ -45,7 +45,7 @@ public abstract class WoodlandMansionStructureMixin {
                     pos.set(x, y, z);
                     if (level.getBlockState(pos).is(Blocks.TARGET)) {
                         try {
-                            StructureTemplateManager manager = JabsFixedWorldAndUI.SERVER.getStructureManager();
+                            StructureTemplateManager manager = JabsFixedWorldAndUI.SERVER.getStructureTemplateManager();
                             Optional<StructureTemplate> maybeStructureTemplate = manager.get(Identifier.parse("minecraft:woodland_mansion/decorations/" + (random.nextInt(11))));
                             maybeStructureTemplate.ifPresent(structureTemplate -> {
                                 StructurePlaceSettings placeSettings = new StructurePlaceSettings().setKnownShape(false).setRotation(Rotation.getRandom(random));

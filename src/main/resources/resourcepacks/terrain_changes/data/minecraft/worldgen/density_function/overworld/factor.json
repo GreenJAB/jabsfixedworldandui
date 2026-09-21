@@ -1,21 +1,23 @@
 {
-  "type": "minecraft:flat_cache",
-  "argument": {
-    "type": "minecraft:cache_2d",
-    "argument": {
-      "type": "minecraft:add",
-      "argument1": 10,
-      "argument2": {
-        "type": "minecraft:mul",
-        "argument1": {
-          "type": "minecraft:blend_alpha"
-        },
-        "argument2": {
-          "type": "minecraft:add",
-          "argument1": -10,
-          "argument2": "jabsfixedworldandui:overworld/combined_factor"
+    "type": "minecraft:cache",
+    "input": {
+        "type": "minecraft:slice",
+        "axis": "y",
+        "coordinate": 0,
+        "input": {
+            "type": "minecraft:add",
+            "left": 10,
+            "right": {
+                "type": "minecraft:mul",
+                "left": {
+                    "type": "minecraft:blend_alpha"
+                },
+                "right": {
+                    "type": "minecraft:add",
+                    "left": -10,
+                    "right": "jabsfixedworldandui:overworld/combined_factor"
+                }
+            }
         }
-      }
     }
-  }
 }

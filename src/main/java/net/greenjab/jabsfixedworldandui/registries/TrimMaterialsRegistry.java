@@ -8,7 +8,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.equipment.ArmorType;
-import net.minecraft.world.item.equipment.trim.MaterialAssetGroup;
 import net.minecraft.world.item.equipment.trim.TrimMaterial;
 import net.ramixin.mixson.Mixson;
 import net.ramixin.mixson.enums.ErrorPolicy;
@@ -17,16 +16,10 @@ import net.ramixin.mixson.util.Index;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class TrimMaterialsRegistry {
 
     public static final ResourceKey<TrimMaterial> COAL = registryKey("coal");
-
-    public static final MaterialAssetGroup COAL_ASSET = create("coal");
-    public static MaterialAssetGroup create(final String base) {
-        return new MaterialAssetGroup(new MaterialAssetGroup.AssetInfo(base), Map.of());
-    }
 
     private static ResourceKey<TrimMaterial> registryKey(final String id) {
         return ResourceKey.create(Registries.TRIM_MATERIAL, JabsFixedWorldAndUI.id(id));
@@ -34,9 +27,6 @@ public class TrimMaterialsRegistry {
     public static void registerTrimMaterials() {
         System.out.println("register TrimMaterials");
     }
-
-
-
 
     private static final List<Identifier> ARMOR_MATERIALS = List.of(
             Identifier.withDefaultNamespace("leather"),
@@ -126,7 +116,7 @@ public class TrimMaterialsRegistry {
                             if (permutations == null || permutations.isEmpty()) return;
 
                             String trimName = TrimMaterialsRegistry.COAL.identifier().getPath();
-                            permutations.addProperty(trimName, JabsFixedWorldAndUI.id("trims/color_palettes/" + trimName).toString());
+                            permutations.addProperty(trimName, JabsFixedWorldAndUI.id("trim/" + trimName).toString());
 
                             break;
                         }

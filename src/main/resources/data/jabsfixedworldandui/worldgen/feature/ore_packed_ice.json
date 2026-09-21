@@ -1,7 +1,6 @@
 {
   "type": "minecraft:ore",
-  "config": {
-    "size": 64,
+    "size": 32,
     "discard_chance_on_air_exposure": 0,
     "targets": [
       {
@@ -10,9 +9,8 @@
           "tag": "minecraft:base_stone_overworld"
         },
         "state": {
-          "Name": "minecraft:terracotta"
+          "id": "minecraft:packed_ice"
         }
       }
     ]
-  }
 }

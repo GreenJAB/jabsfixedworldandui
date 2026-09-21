@@ -41,6 +41,7 @@
     "structure.OreFeatureMixin",
     "structure.ServerLevelMixin",
     "structure.SnowAndFreezeFeatureMixin",
+    "structure.StructureProcessorTypesMixin",
     "structure.WoodlandMansionPieceMixin",
     "structure.WoodlandMansionPiecePlacerMixin",
     "structure.WoodlandMansionStructureMixin"

@@ -6,7 +6,6 @@ import net.minecraft.advancements.DisplayInfo;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
-import net.minecraft.client.gui.screens.advancements.AdvancementTab;
 import net.minecraft.client.gui.screens.advancements.AdvancementWidget;
 import net.minecraft.client.gui.screens.advancements.AdvancementWidgetType;
 import net.minecraft.client.renderer.RenderPipelines;
@@ -60,10 +59,6 @@ public abstract class AdvancementWidgetMixin {
 
     @Shadow
     @Final
-    private AdvancementTab tab;
-
-    @Shadow
-    @Final
     private Minecraft minecraft;
 
     @Shadow
@@ -89,7 +84,7 @@ public abstract class AdvancementWidgetMixin {
 
     @Inject(method = "extractRenderState", at = @At("HEAD"), cancellable = true)
     private void dontRenderAll(GuiGraphicsExtractor graphics, int xo, int yo, CallbackInfo ci){
-        if (!this.display.isHidden() || this.progress != null && this.progress.isDone()) {
+        if (!this.display.hidden() || this.progress != null && this.progress.isDone()) {
             boolean thisGot = false;
             boolean parentGot = true;
             float f = this.progress == null ? 0.0F : this.progress.getPercent();
@@ -107,7 +102,7 @@ public abstract class AdvancementWidgetMixin {
             }
 
             if (thisGot || parentGot) {
-                graphics.blitSprite(RenderPipelines.GUI_TEXTURED, iconFrame.frameSprite(this.display.getType()), xo + this.x + 3, yo + this.y, 26, 26);
+                graphics.blitSprite(RenderPipelines.GUI_TEXTURED, iconFrame.frameSprite(this.display.type()), xo + this.x + 3, yo + this.y, 26, 26);
                 graphics.fakeItem(this.icon, xo + this.x + 8, yo + this.y + 5);
             }
         }
@@ -133,14 +128,15 @@ public abstract class AdvancementWidgetMixin {
     }
 
     @Inject(method = "extractHover", at = @At("HEAD"), cancellable = true)
-    private void drawXP(GuiGraphicsExtractor graphics, int xo, int yo, float fade, int screenxo, int screenyo, CallbackInfo ci){
+    private void drawXP(GuiGraphicsExtractor graphics, int xo, int yo, float fade, int screenxo, int screenyo, int screenWidth,
+                        CallbackInfo ci){
         Font font = this.minecraft.font;
         int titleBarHeight = 9 * this.titleLines.size() + 9 + 8;
         int titleTop = yo + this.y + (26 - titleBarHeight) / 2;
         int titleBarBottom = titleTop + titleBarHeight;
         int descriptionTextHeight = this.description.size() * 9;
         int descriptionHeight = 6 + descriptionTextHeight;
-        boolean leftSide = screenxo + xo + this.x + this.width + 26 >= this.tab.getScreen().width;
+        boolean leftSide = screenxo + xo + this.x + this.width + 26 >= screenWidth;
         Component progressText = this.progress == null ? null : this.progress.getProgressText();
         int progressWidth = progressText == null ? 0 : font.width(progressText);
         float amount = this.progress == null ? 0.0F : this.progress.getPercent();
@@ -189,7 +185,7 @@ public abstract class AdvancementWidgetMixin {
         graphics.blitSprite(RenderPipelines.GUI_TEXTURED, secondHalf.boxSprite(), 200, titleBarHeight, 200 - secondBarWidth, 0, titleLeft + firstHalfWidth, titleTop, secondBarWidth, titleBarHeight);
 
         graphics.blitSprite(
-                RenderPipelines.GUI_TEXTURED, iconFrame.frameSprite(this.display.getType()), xo + this.x + 3, yo + this.y, 26, 26
+                RenderPipelines.GUI_TEXTURED, iconFrame.frameSprite(this.display.type()), xo + this.x + 3, yo + this.y, 26, 26
         );
         int descriptionLeft = titleLeft + 5;
         if (leftSide) {

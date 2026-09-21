@@ -6,10 +6,10 @@ accessible field net/minecraft/world/inventory/AbstractMountInventoryMenu mount 
 accessible field net/minecraft/client/gui/screens/advancements/AdvancementWidget progress Lnet/minecraft/advancements/AdvancementProgress;
 accessible class net/minecraft/client/gui/screens/worldselection/CreateWorldScreen$GameTab
 accessible field net/minecraft/world/entity/LivingEntity equipment Lnet/minecraft/world/entity/EntityEquipment;
-accessible field net/minecraft/world/item/component/BundleContents$Mutable items Ljava/util/List;
 accessible class net/minecraft/world/inventory/ArmorSlot
 accessible class net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$MansionPiecePlacer
 accessible class net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$MansionGrid
 accessible field net/minecraft/world/level/storage/loot/BuiltInLootTables LOCATIONS Ljava/util/Set;
 accessible field net/minecraft/world/entity/item/ItemEntity age I
 accessible class net/minecraft/client/StringSplitter$LineBreakFinder
+accessible field net/minecraft/world/item/component/SimpleMutableContainer items Ljava/util/List;

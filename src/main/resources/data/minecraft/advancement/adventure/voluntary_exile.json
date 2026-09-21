@@ -3,23 +3,23 @@
     "criteria": {
         "voluntary_exile": {
             "conditions": {
-                "entity": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:entity_type": "#minecraft:raiders",
-                            "equipment": {
-                                "head": {
-                                    "items": [
-                                        "minecraft:white_banner"
-                                    ],
-                                    "nbt": "{BlockEntityTag:{Patterns:[{Color:9,Pattern:\"mr\"},{Color:8,Pattern:\"bs\"},{Color:7,Pattern:\"cs\"},{Color:8,Pattern:\"bo\"},{Color:15,Pattern:\"ms\"},{Color:8,Pattern:\"hh\"},{Color:8,Pattern:\"mc\"},{Color:15,Pattern:\"bo\"}],id:\"minecraft:banner\"},HideFlags:32,display:{Name:'{\"translate\":\"block.minecraft.ominous_banner\",\"color\":\"gold\"}'}}"
-                                }
+                "entity":
+                {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_type": "#minecraft:raiders",
+                        "equipment": {
+                            "head": {
+                                "items": [
+                                    "minecraft:white_banner"
+                                ],
+                                "nbt": "{BlockEntityTag:{Patterns:[{Color:9,Pattern:\"mr\"},{Color:8,Pattern:\"bs\"},{Color:7,Pattern:\"cs\"},{Color:8,Pattern:\"bo\"},{Color:15,Pattern:\"ms\"},{Color:8,Pattern:\"hh\"},{Color:8,Pattern:\"mc\"},{Color:15,Pattern:\"bo\"}],id:\"minecraft:banner\"},HideFlags:32,display:{Name:'{\"translate\":\"block.minecraft.ominous_banner\",\"color\":\"gold\"}'}}"
                             }
                         }
                     }
-                ]
+                }
+
             },
             "trigger": "minecraft:player_killed_entity"
         }
@@ -70,7 +70,7 @@
             },
             "count": 1,
             "id": "minecraft:white_banner"
-            },
+        },
         "title": {
             "translate": "advancements.adventure.voluntary_exile.title"
         }

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:ore",
-  "config": {
     "size": 64,
     "discard_chance_on_air_exposure": 0,
     "targets": [
@@ -10,9 +9,8 @@
           "tag": "minecraft:base_stone_overworld"
         },
         "state": {
-          "Name": "minecraft:mossy_cobblestone"
+          "id": "minecraft:mossy_cobblestone"
         }
       }
     ]
-  }
 }
