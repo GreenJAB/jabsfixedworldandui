@@ -1,7 +1,7 @@
 package net.greenjab.jabsfixedworldandui.mixin.inventory;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import net.fabricmc.loader.api.FabricLoader;
+import net.greenjab.jabsfixedworldandui.registries.GameRuleRegistry;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.core.component.DataComponents;
@@ -65,11 +65,9 @@ public abstract class PlayerMixin {
             for (ItemStack itemStack : PE.inventoryMenu.getCraftSlots().getItems()) {
                 ItemEntity drop = PE.createItemStackToDrop(itemStack, true, false);
                 if (drop != null) {
-                    if (FabricLoader.getInstance().isModLoaded("jabsfixedcombat")) {
-                        int ticks = 30 * 20 * 60;
-                        if (ticks == 0) drop.setUnlimitedLifetime();
-                        else drop.age = 6000-ticks;
-                    }
+                    int ticks = level.getGameRules().get(GameRuleRegistry.ITEM_DEATH_DESPAWN_TIME) * 20 * 60;
+                    if (ticks == 0) drop.setUnlimitedLifetime();
+                    else drop.age = 6000 - ticks;
                     PE.level().addFreshEntity(drop);
                 }
             }

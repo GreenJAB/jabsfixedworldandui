@@ -13,3 +13,4 @@ accessible field net/minecraft/world/level/storage/loot/BuiltInLootTables LOCATI
 accessible field net/minecraft/world/entity/item/ItemEntity age I
 accessible class net/minecraft/client/StringSplitter$LineBreakFinder
 accessible field net/minecraft/world/item/component/SimpleMutableContainer items Ljava/util/List;
+accessible field net/minecraft/world/entity/EntityEquipment items Ljava/util/EnumMap;

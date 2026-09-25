@@ -15,10 +15,16 @@ import java.util.function.ToIntFunction;
 public class GameRuleRegistry {
     public static final GameRuleCategory JABSFIXEDWORLDANDUI = GameRuleCategory.register(JabsFixedWorldAndUI.id("aae_jabsfixedworldandui"));
 
-
+    public static GameRule<Boolean> DISABLE_F3;
+    public static GameRule<Boolean> PARTIAL_KEEP_INVENTORY;
+    public static GameRule<Integer> ITEM_DEATH_DESPAWN_TIME;
 
     public static void registerGameRules() {
         System.out.println("register GameRules");
+
+        DISABLE_F3 = registerBoolean("disable_f3", false);
+        PARTIAL_KEEP_INVENTORY = registerBoolean("partial_keep_inventory", false);
+        ITEM_DEATH_DESPAWN_TIME = registerInteger("item_death_despawn_time", 30, 0, 30);
 
     }
 

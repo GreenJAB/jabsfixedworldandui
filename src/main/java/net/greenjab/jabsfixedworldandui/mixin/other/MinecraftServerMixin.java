@@ -1,5 +1,6 @@
 package net.greenjab.jabsfixedworldandui.mixin.other;
 import net.greenjab.jabsfixedworldandui.JabsFixedWorldAndUI;
+import net.greenjab.jabsfixedworldandui.network.GameRuleStatus;
 import net.greenjab.jabsfixedworldandui.other.Networking;
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,5 +17,6 @@ public abstract class MinecraftServerMixin {
             JabsFixedWorldAndUI.SERVER = SW;
             Networking.SERVER_LOCK.notifyAll();
         }
+        if (SW.getTickCount()%101==0) GameRuleStatus.sendData(SW);
     }
 }

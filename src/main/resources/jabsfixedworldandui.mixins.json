@@ -15,6 +15,7 @@
     "inventory.BundleContentsMixin",
     "inventory.BundleContentsMutableMixin",
     "inventory.CraftingInventoryAccessor",
+    "inventory.EntityEquipmentMixin",
     "inventory.InventoryMenuMixin",
     "inventory.InventoryMixin",
     "inventory.ItemStackMixin",
