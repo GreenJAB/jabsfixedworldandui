@@ -133,7 +133,7 @@ public abstract class GuiMixin {
         if (clock||compass||daylight) {
             String string;
             if (clock) {
-                if (player.isCrouching()) {
+                if (player.isShiftKeyDown()) {
                     AtomicReference<String> s = new AtomicReference<>("");
                     ClockManager clockManager = client.level.clockManager();
                     client.level.registryAccess()
@@ -152,7 +152,7 @@ public abstract class GuiMixin {
                     if (FabricLoader.getInstance().isModLoaded("jabsfixedmobsandblocks")) string = string + Component.translatable("world.moon." + icons[moon]).getString();
                 }
             } else if (compass) {
-                if (player.isCrouching()) {
+                if (player.isShiftKeyDown()) {
                     string = String.format(Locale.ROOT, "%.1f / %.1f", Mth.wrapDegrees(player.getYRot()), Mth.wrapDegrees(player.getXRot()));
                 } else string = getDirection(player.getYRot()) + " | " + player.getBlockX() + ", " + player.getBlockY() + ", " + player.getBlockZ();
             } else {

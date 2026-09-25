@@ -19,6 +19,9 @@ public class JabsFixedWorldAndUIClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
+
+		ClientSyncHandler.init();
+
 		HotbarCycler.register();
 
 		FabricLoader.getInstance().getModContainer("jabsfixedworldandui").ifPresent(modContainer -> {
