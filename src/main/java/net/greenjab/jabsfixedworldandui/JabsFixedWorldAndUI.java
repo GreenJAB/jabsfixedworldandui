@@ -5,6 +5,8 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
+import net.greenjab.jabsfixedworldandui.network.GameRuleStatus;
+import net.greenjab.jabsfixedworldandui.network.SyncHandler;
 import net.greenjab.jabsfixedworldandui.registries.BiomeAdditions;
 import net.greenjab.jabsfixedworldandui.registries.GameRuleRegistry;
 import net.greenjab.jabsfixedworldandui.registries.LootTableRegistry;
@@ -32,10 +34,13 @@ public class JabsFixedWorldAndUI implements ModInitializer {
 	public static final String MOD_NAME = "Jabs Fixed World And UI";
 	public static final Logger LOGGER = LoggerFactory.getLogger(NAMESPACE);
 	public static MinecraftServer SERVER = null;
+	public static GameRuleStatus gameRules = new GameRuleStatus();
 
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Initializing " + MOD_NAME);
+
+		SyncHandler.init();
 
 		GameRuleRegistry.registerGameRules();
 		LootTableRegistry.registerLootTable();
