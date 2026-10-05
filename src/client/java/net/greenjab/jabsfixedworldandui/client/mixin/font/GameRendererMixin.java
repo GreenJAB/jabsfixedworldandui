@@ -25,8 +25,9 @@ public abstract class GameRendererMixin {
         original.call(instance, graphics, mouseX, mouseY, a);
         if (JabsFixedWorldAndUIClient.fontLegend) {
             if (minecraft.screen instanceof BookEditScreen || minecraft.screen instanceof BookSignScreen ||
-                minecraft.screen instanceof AbstractSignEditScreen || String.valueOf(minecraft.screen.getTitle()).contains("anvil"))
-                graphics.blit(RenderPipelines.GUI_TEXTURED, Identifier.withDefaultNamespace("textures/gui/container/anvil_text_guide.png"), 10, 10, 0, 0, 146, 180, 146, 180);
+                minecraft.screen instanceof AnvilScreen || String.valueOf(minecraft.screen.getTitle()).contains("anvil") ||
+                minecraft.screen instanceof AbstractSignEditScreen)
+                    graphics.blit(RenderPipelines.GUI_TEXTURED, Identifier.withDefaultNamespace("textures/gui/container/anvil_text_guide.png"), 10, 10, 0, 0, 146, 180, 146, 180);
         }
     }
 }
