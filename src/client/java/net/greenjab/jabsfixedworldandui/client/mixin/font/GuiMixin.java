@@ -24,8 +24,9 @@ public abstract class GuiMixin {
         original.call(instance, graphics, mouseX, mouseY, a);
         if (JabsFixedWorldAndUIClient.fontLegend) {
             if (screen instanceof BookEditScreen || screen instanceof BookSignScreen ||
-                screen instanceof AbstractSignEditScreen || String.valueOf(screen.getTitle()).contains("anvil"))
-                graphics.blit(RenderPipelines.GUI_TEXTURED, Identifier.withDefaultNamespace("textures/gui/container/anvil_text_guide.png"), 10, 10, 0, 0, 146, 180, 146, 180);
+                screen instanceof AnvilScreen || String.valueOf(screen.getTitle()).contains("anvil") ||
+                screen instanceof AbstractSignEditScreen)
+                    graphics.blit(RenderPipelines.GUI_TEXTURED, Identifier.withDefaultNamespace("textures/gui/container/anvil_text_guide.png"), 10, 10, 0, 0, 146, 180, 146, 180);
         }
     }
 }
