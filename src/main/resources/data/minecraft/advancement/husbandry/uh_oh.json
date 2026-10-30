@@ -1,18 +1,20 @@
 {
-  "parent": "minecraft:adventure/very_very_frightening",
+  "parent": "minecraft:husbandry/root",
   "criteria": {
     "give_tnt_directly": {
       "conditions": {
-        "entity": {
-          "type": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "minecraft:entity_type": "minecraft:sulfur_cube",
-            "minecraft:flags": {
-              "is_baby": false
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_type": "minecraft:sulfur_cube",
+              "minecraft:flags": {
+                "is_baby": false
+              }
             }
           }
-        },
+        ],
         "item": {
           "items": "#minecraft:sulfur_cube_archetype/explosive"
         }
@@ -21,16 +23,18 @@
     },
     "pick_up_dropped_tnt": {
       "conditions": {
-        "entity": {
-          "type": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "minecraft:entity_type": "minecraft:sulfur_cube",
-            "minecraft:flags": {
-              "is_baby": false
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_type": "minecraft:sulfur_cube",
+              "minecraft:flags": {
+                "is_baby": false
+              }
             }
           }
-        },
+        ],
         "item": {
           "items": "#minecraft:sulfur_cube_archetype/explosive"
         }
